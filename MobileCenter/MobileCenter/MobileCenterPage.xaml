@@ -14,7 +14,6 @@
         <ListView 
             ItemsSource="{Binding AllPosts}"
             CachingStrategy="RecycleElement"
-            Footer=""
             Grid.Row="0">
             <ListView.ItemTemplate>
                 <DataTemplate>
