@@ -18,7 +18,7 @@ namespace MobileCenter.iOS
         {
             global::Xamarin.Forms.Forms.Init();
 
-            Microsoft.Azure.Mobile.MobileCenter.Start("61318f7e-d2f3-4742-86f8-45800aa7608a", typeof(Analytics), typeof(Crashes));
+            Microsoft.Azure.Mobile.MobileCenter.Start("0e769907-703e-4a52-b9f8-7deb5620c6b1", typeof(Analytics), typeof(Crashes));
 
             LoadApplication(new App());
 

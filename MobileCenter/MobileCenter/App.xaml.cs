@@ -1,5 +1,7 @@
 ﻿using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace MobileCenter
 {
     public partial class App : Application
@@ -8,7 +10,7 @@ namespace MobileCenter
         {
             InitializeComponent();
 
-            MainPage = new MobileCenterPage();
+            MainPage = new NavigationPage(new MobileCenterPage());
         }
 
         protected override void OnStart()

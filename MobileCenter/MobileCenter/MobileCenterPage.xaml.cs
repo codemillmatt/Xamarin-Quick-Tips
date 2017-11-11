@@ -7,6 +7,8 @@ namespace MobileCenter
         public MobileCenterPage()
         {
             InitializeComponent();
+
+            BindingContext = new MobileCenterViewModel();
         }
     }
 }

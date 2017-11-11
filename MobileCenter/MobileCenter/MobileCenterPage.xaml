@@ -6,11 +6,24 @@
     x:Class="MobileCenter.MobileCenterPage"
     Title="{Binding Title}">
 
-    <ListView ItemsSource="{Binding AllPosts}">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <TextCell Text="" />
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <ListView 
+            ItemsSource="{Binding AllPosts}"
+            CachingStrategy="RecycleElement"
+            Footer=""
+            Grid.Row="0">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Title}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Get Data" Command="{Binding GetDataCommand}" Grid.Row="1" 
+            BackgroundColor="#3cb371" TextColor="White" IsEnabled="{Binding IsNotBusy}" />
+    </Grid>
+
 </ContentPage>
